@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Add Feedback{% endblock %}
+{% block title %}Edit Feedback{% endblock %}
 
 {% block content %}
 <nav class="navbar navbar-expand-lg navbar-light  bg-success">
@@ -18,7 +18,7 @@
     <div class="row">
         <div class="col-sm"></div>
         <div class="col-lg">
-            <h3 class="text-success text-center my-2">New Feedback</h3>
+            <h3 class="text-primary text-center my-2">Edit Feedback</h3>
             <form id="add-feedback-form" class="text-center py-4" method="POST">
                 {{ form.hidden_tag() }} <!--add type=hidden form fields -->
               
@@ -36,6 +36,7 @@
                 {% endfor %}
               
                 <button class="btn btn-success">Submit</button>
+                <a href="/users/{{ username }}" class="btn btn-secondary">Cancel </a>
               </form>
         </div>
         <div class="col-sm"></div>
